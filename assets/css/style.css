@@ -158,7 +158,9 @@ body {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: white;
-  }
+    overflow: visible;
+}
+
 .highlight-name {
     color: var(--highlight-color);
     font-weight: 700;
@@ -429,6 +431,7 @@ body {
     border-radius: 12px;
     padding: 30px;
     margin-bottom: 30px;
+    min-width: 300px;
 }
 
 
@@ -453,5 +456,28 @@ body {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+
+/* Base class for all highlighted words */
+.highlight-word {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+/* Specific styling for each word */
+.belief {
+    background-image: linear-gradient(90deg, #ff66b3 0%, #ff9eb5 100%);
+}
+
+.decisions {
+    background-image: linear-gradient(90deg, #4fc3f7 0%, #81d4fa 100%);
+}
+
+.uncertainty {
+    background-image: linear-gradient(90deg, #8c9eff 0%, #b39ddb 100%);
 }
 
