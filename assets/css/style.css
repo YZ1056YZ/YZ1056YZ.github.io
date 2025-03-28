@@ -375,3 +375,38 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Artistic name styling */
+.name-artistic {
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.name-accent {
+    color: #e94e77; /* Bold pink/red accent color */
+    font-style: italic;
+}
+
+/* Motto lines with icons */
+.motto-line {
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.motto-line i {
+    font-size: 1.4rem;
+    margin-right: 12px;
+    color: var(--highlight-color);
+}
+
+.job-title {
+    font-size: 1.3rem;
+    color: var(--highlight-color);
+    font-weight: 500;
+}
+
+.motto-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
