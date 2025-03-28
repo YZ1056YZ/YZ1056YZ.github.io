@@ -7,7 +7,7 @@
     --highlight-color: #61dafb;
     --tag-color: #4caf50;
     --font-family: 'Monaspace Radon', monospace;
-    --gradient: linear-gradient(90deg, #ff66b3 0%, #4fc3f7 50%, #8c9eff 100%);
+    --gradient: linear-gradient(90deg, #ff007a 0%, #00a8ff 50%, #6b00ff 100%);
 }
 
 body {
@@ -432,31 +432,26 @@ body {
 }
 
 
-/* Gradient text effect */
+/* Update the .gradientText class */
 .gradientText {
     background-image: var(--gradient);
     -webkit-background-clip: text;
     background-clip: text;
+    color: transparent; /* Add this as a fallback */
     -webkit-text-fill-color: transparent;
-    background-size: 200% auto;
+    background-size: 200% 200%; /* Slightly larger for more visible movement */
     font-family: 'Caveat', cursive;
     font-weight: bold;
     font-size: 3rem;
     text-shadow: 0 0 15px rgba(79, 195, 247, 0.5), 
                  3px 3px 5px rgba(0, 0, 0, 0.3);
     animation: gradientMove 6s ease infinite;
-  }
-  
-/* Define the animation */
-@keyframes backgroundSizeAnimation {
-0% { background-position: 0% 50%; }
-50% { background-position: 100% 50%; }
-100% { background-position: 0% 50%; }
 }
 
+/* Remove the backgroundSizeAnimation and keep only gradientMove */
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-  }
+}
 
