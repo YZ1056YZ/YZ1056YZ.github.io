@@ -431,7 +431,9 @@ body {
     border-radius: 12px;
     padding: 30px;
     margin-bottom: 30px;
-    min-width: 300px;
+    width: auto;
+    min-width: auto;
+    max-width: none;
 }
 
 
