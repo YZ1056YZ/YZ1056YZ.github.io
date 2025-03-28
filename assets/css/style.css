@@ -431,7 +431,7 @@ body {
     border-radius: 12px;
     padding: 30px;
     margin-bottom: 30px;
-    width: 350px;
+    min-width: 300px;
 }
 
 
@@ -449,6 +449,9 @@ body {
     text-shadow: 0 0 15px rgba(79, 195, 247, 0.5), 
                  3px 3px 5px rgba(0, 0, 0, 0.3);
     animation: gradientMove 6s ease infinite;
+    padding-right: 10px; /* Add extra space */
+    width: auto; /* Ensure it takes the width it needs */
+    overflow: visible; /* Prevent any clipping */
 }
 
 /* Remove the backgroundSizeAnimation and keep only gradientMove */
