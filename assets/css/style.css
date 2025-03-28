@@ -431,7 +431,7 @@ body {
     border-radius: 12px;
     padding: 30px;
     margin-bottom: 30px;
-    min-width: 300px;
+    width: 350px;
 }
 
 
@@ -459,25 +459,20 @@ body {
 }
 
 
-/* Base class for all highlighted words */
-.highlight-word {
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
+/* Simple styling for keywords */
+.keyword {
     font-weight: bold;
 }
 
-/* Specific styling for each word */
 .belief {
-    background-image: linear-gradient(90deg, #ff66b3 0%, #ff9eb5 100%);
+    color: #ff66b3; /* Pink */
 }
 
 .decisions {
-    background-image: linear-gradient(90deg, #4fc3f7 0%, #81d4fa 100%);
+    color: #4fc3f7; /* Blue */
 }
 
 .uncertainty {
-    background-image: linear-gradient(90deg, #8c9eff 0%, #b39ddb 100%);
+    color: #8c9eff; /* Purple */
 }
 
