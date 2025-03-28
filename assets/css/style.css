@@ -387,6 +387,16 @@ body {
     font-style: italic;
 }
 
+/* Handwritten style heading */
+.handwritten {
+    font-family: 'Caveat', cursive, var(--font-family); /* Add Caveat font to your fonts.css */
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
 /* Motto lines with icons */
 .motto-line {
     display: flex;
@@ -409,4 +419,12 @@ body {
 .motto-text {
     font-size: 1.1rem;
     line-height: 1.5;
+}
+
+/* You may also want to adjust the intro-card background */
+.intro-card {
+    background: var(--bg-color);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
 }
