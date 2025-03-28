@@ -7,7 +7,7 @@
     --highlight-color: #61dafb;
     --tag-color: #4caf50;
     --font-family: 'Monaspace Radon', monospace;
-    --gradient: linear-gradient(90deg, #4fe1ff 0%, #5cceff 50%, #79e8ff 100%);
+    --gradient: linear-gradient(90deg, #ff66b3 0%, #4fc3f7 50%, #8c9eff 100%);
 }
 
 body {
@@ -438,11 +438,14 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* Remove this line: text-fill-color: transparent; */
-    background-size: 200%;
-    background-position: 0%;
-    font-family: 'Caveat', cursive; /* Same font as the greeting */
-}
+    background-size: 200% auto;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+    font-size: 3rem;
+    text-shadow: 0 0 15px rgba(79, 195, 247, 0.5), 
+                 3px 3px 5px rgba(0, 0, 0, 0.3);
+    animation: gradientMove 6s ease infinite;
+  }
   
 /* Define the animation */
 @keyframes backgroundSizeAnimation {
@@ -450,4 +453,10 @@ body {
 50% { background-position: 100% 50%; }
 100% { background-position: 0% 50%; }
 }
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 
