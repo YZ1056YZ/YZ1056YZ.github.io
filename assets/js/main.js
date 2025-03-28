@@ -594,6 +594,15 @@ function initPOMDPGame() {
         checkLocationButton.addEventListener('click', checkLocation);
     }
     
+    // Add give-up button event listener
+    const giveUpButton = document.getElementById('give-up');
+    if (giveUpButton) {
+        giveUpButton.addEventListener('click', function() {
+            // Reset game with new parameters
+            initGame();
+        });
+    }
+    
     moveButtons.forEach(button => {
         button.addEventListener('click', function() {
             const dx = parseInt(this.getAttribute('data-dx'));
