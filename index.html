@@ -47,20 +47,101 @@
 
     <!-- Hero section - prominent introduction area -->
     <section id="hero" class="hero-section">
+        <!-- Add the blobs right here, before the container -->
+        <div class="blob-1"></div>
+        <div class="blob-2"></div>
+
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-image">
-                    <img src="assets/images/自拍.jpg" alt="Yunuo Zhang">
-                </div>
-                <div class="hero-text">
+            <!-- Left column for profile and personal info -->
+            <div class="profile-column">
+                <div class="profile-card">
+                    <div class="hero-image">
+                        <img src="assets/images/自拍.jpg" alt="Yunuo Zhang">
+                    </div>
                     <h1>Yunuo Zhang</h1>
-                    <h2>Ph.D. Candidate in Computer Science</h2>
-                    <p>Vanderbilt University</p>
+                    <p class="title">Computer Science Ph.D. Candidate</p>
+                    
+                    <!-- Location and info -->
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i> Nashville, Tennessee
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-university"></i> Vanderbilt University
+                    </div>
+                    
+                    <!-- Social links -->
                     <div class="social-links">
-                        <!-- <a href="https://github.com/YZ1056YZ" target="_blank"><i class="fab fa-github"></i></a> -->
-                        <!-- <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a> -->
-                        <a href="https://scholar.google.com/citations?user=kkslga0AAAAJ&hl=zh-CN" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-                        <a href="mailto:yunuo.zhang@vanderbilt.edu"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/YZ1056YZ" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="mailto:yunuo.zhang@vanderbilt.edu" class="social-icon"><i class="fas fa-envelope"></i></a>
+                        <a href="https://scholar.google.com/citations?user=kkslga0AAAAJ&hl=zh-CN" target="_blank" class="social-icon"><i class="fas fa-graduation-cap"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Research tags similar to the inspiration site -->
+                <div class="tags-card">
+                    <span class="tag">POMDPs</span>
+                    <span class="tag">AI</span>
+                    <span class="tag">ML</span>
+                    <span class="tag">Decision Making</span>
+                    <span class="tag">Uncertainty</span>
+                </div>
+                
+                <!-- Timeline like in the inspiration site -->
+                <div class="timeline-card">
+                    <div class="timeline-item">
+                        <span class="timeline-date">2022</span>
+                        <span class="timeline-content">Ph.D. Candidacy</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2021</span>
+                        <span class="timeline-content">Started Ph.D.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right column for main content -->
+            <div class="content-column">
+                <!-- Motto with highlights like in the inspiration -->
+                <div class="intro-card">
+                    <h2>Hello I'm <span class="highlight-name">Yunuo</span></h2>
+                    <p class="motto">Researching <span class="highlight">intelligent systems</span> that make <span class="highlight">optimal decisions</span> under uncertainty.</p>
+                </div>
+                
+                <!-- GitHub-style contribution graph -->
+                <div class="contributions-card">
+                    <h3>Research Activity</h3>
+                    <div class="contribution-graph">
+                        <!-- You'll need JavaScript to generate this -->
+                    </div>
+                </div>
+                
+                <!-- Site sections like in the inspiration -->
+                <div class="sites-card">
+                    <h3>site</h3>
+                    <div class="site-grid">
+                        <a href="pages/publications.html" class="site-item">
+                            <i class="fas fa-scroll"></i>
+                            <span>Publications</span>
+                        </a>
+                        <a href="pages/projects.html" class="site-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Projects</span>
+                        </a>
+                        <a href="pages/blog.html" class="site-item">
+                            <i class="fas fa-pen-fancy"></i>
+                            <span>Blog</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Skills section -->
+                <div class="skills-card">
+                    <h3>skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">Machine Learning</div>
+                        <div class="skill-item">POMDPs</div>
+                        <div class="skill-item">Research</div>
                     </div>
                 </div>
             </div>

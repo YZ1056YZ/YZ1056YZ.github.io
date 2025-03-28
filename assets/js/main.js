@@ -171,3 +171,35 @@ function highlightInvalid(element) {
         this.classList.remove('invalid');
     }, { once: true });
 }
+
+
+function createContributionGraph() {
+    const graphContainer = document.querySelector('.contribution-graph');
+    if (!graphContainer) return;
+    
+    // Create a placeholder graph - in a real implementation 
+    // you would populate this with actual data
+    const rows = 7;
+    const cols = 52;
+    const levels = ['low', 'med', 'high'];
+    
+    let graphHTML = '<div class="graph-wrapper">';
+    
+    for (let i = 0; i < rows; i++) {
+        graphHTML += '<div class="graph-row">';
+        for (let j = 0; j < cols; j++) {
+            // Randomly assign activity levels for demonstration
+            const level = Math.random() > 0.7 ? levels[Math.floor(Math.random() * levels.length)] : '';
+            graphHTML += `<div class="graph-cell ${level}"></div>`;
+        }
+        graphHTML += '</div>';
+    }
+    
+    graphHTML += '</div>';
+    graphContainer.innerHTML = graphHTML;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Other initialization code
+    createContributionGraph();
+});
