@@ -481,3 +481,177 @@ body {
     color: #8c9eff; /* Purple */
 }
 
+
+/* POMDP Game Styling */
+.game-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.game-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: var(--highlight-color);
+}
+
+.pomdp-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.game-intro {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.game-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.setting-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-select {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.game-button {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.primary-button {
+    background: var(--primary-color);
+    color: white;
+}
+
+.primary-button:hover {
+    background: var(--accent-color);
+}
+
+.game-play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.game-stats {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+#game-canvas {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.game-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.movement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.move-btn, .sensor-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.move-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sensor-btn {
+    background: rgba(255, 195, 0, 0.2);
+}
+
+.sensor-btn:hover {
+    background: rgba(255, 195, 0, 0.3);
+}
+
+.check-button {
+    background: rgba(46, 204, 113, 0.3);
+    color: var(--text-color);
+    width: 100%;
+}
+
+.check-button:hover:not([disabled]) {
+    background: rgba(46, 204, 113, 0.5);
+}
+
+.check-button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.game-over {
+    text-align: center;
+}
+
+.game-over h4 {
+    color: #2ecc71;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.game-instructions {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+}
+
+.game-instructions ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.hidden {
+    display: none;
+}
