@@ -128,85 +128,98 @@
                 
 
                 <div class="game-card">
-                    <h3>Particle Belief Navigator</h3>
-                    <div class="pomdp-game">
-                        <div id="game-container" class="game-container">
-                            <div id="game-intro" class="game-intro">
-                                <p>Find the hidden target using noisy sensor readings and particle filtering!</p>
-                                <div class="game-settings">
-                                    <div class="setting-group">
-                                        <label for="grid-size">Grid Size:</label>
-                                        <select id="grid-size" class="game-select">
-                                            <option value="5">5x5</option>
-                                            <option value="7" selected>7x7</option>
-                                            <option value="9">9x9</option>
-                                        </select>
+                    <h3>Particle Belief Navigator <button id="toggle-game" class="toggle-btn"><i class="fas fa-chevron-down"></i></button></h3>
+                    
+                    <div id="game-content" class="game-content collapsed">
+                        <div class="pomdp-game">
+                            <div id="game-container" class="game-container">
+                                <div id="game-intro" class="game-intro">
+                                    <p>Find the hidden target using noisy sensor readings and particle filtering!</p>
+                                    <div class="game-settings">
+                                        <div class="setting-group">
+                                            <label for="grid-size">Grid Size:</label>
+                                            <select id="grid-size" class="game-select">
+                                                <option value="5">5x5</option>
+                                                <option value="7" selected>7x7</option>
+                                                <option value="9">9x9</option>
+                                            </select>
+                                        </div>
+                                        <div class="setting-group">
+                                            <label for="particle-count">Particles:</label>
+                                            <select id="particle-count" class="game-select">
+                                                <option value="25">25</option>
+                                                <option value="50" selected>50</option>
+                                                <option value="100">100</option>
+                                            </select>
+                                        </div>
+                                        <div class="setting-group">
+                                            <label for="sensor-noise">Sensor Noise:</label>
+                                            <select id="sensor-noise" class="game-select">
+                                                <option value="0.5">Low</option>
+                                                <option value="1" selected>Medium</option>
+                                                <option value="1.5">High</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="setting-group">
-                                        <label for="particle-count">Particles:</label>
-                                        <select id="particle-count" class="game-select">
-                                            <option value="25">25</option>
-                                            <option value="50" selected>50</option>
-                                            <option value="100">100</option>
-                                        </select>
-                                    </div>
-                                    <div class="setting-group">
-                                        <label for="sensor-noise">Sensor Noise:</label>
-                                        <select id="sensor-noise" class="game-select">
-                                            <option value="0.5">Low</option>
-                                            <option value="1" selected>Medium</option>
-                                            <option value="1.5">High</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <button id="start-game" class="game-button primary-button">Start Game</button>
-                            </div>
-                            
-                            <div id="game-play" class="game-play hidden">
-                                <div class="game-stats">
-                                    <div>Moves: <span id="moves-counter">0</span></div>
-                                    <div>Score: <span id="score-counter">100</span></div>
-                                    <div>Belief: <span id="belief-counter">0</span>%</div>
+                                    <button id="start-game" class="game-button primary-button">Start Game</button>
                                 </div>
                                 
-                                <canvas id="game-canvas" width="300" height="300"></canvas>
-                                
-                                <div id="game-controls" class="game-controls">
-                                    <div class="movement-grid">
-                                        <button class="move-btn" data-dx="-1" data-dy="-1">↖</button>
-                                        <button class="move-btn" data-dx="0" data-dy="-1">↑</button>
-                                        <button class="move-btn" data-dx="1" data-dy="-1">↗</button>
-                                        <button class="move-btn" data-dx="-1" data-dy="0">←</button>
-                                        <button id="sensor-btn" class="sensor-btn">📡</button>
-                                        <button class="move-btn" data-dx="1" data-dy="0">→</button>
-                                        <button class="move-btn" data-dx="-1" data-dy="1">↙</button>
-                                        <button class="move-btn" data-dx="0" data-dy="1">↓</button>
-                                        <button class="move-btn" data-dx="1" data-dy="1">↘</button>
+                                <div id="game-play" class="game-play hidden">
+                                    <div class="game-stats">
+                                        <div>Moves: <span id="moves-counter">0</span></div>
+                                        <div>Score: <span id="score-counter">100</span></div>
+                                        <div>Belief: <span id="belief-counter">0</span>%</div>
                                     </div>
                                     
-                                    <button id="check-location" class="game-button check-button" disabled>
-                                        Check Most Likely Location
-                                    </button>
+                                    <canvas id="game-canvas" width="300" height="300"></canvas>
+                                    
+                                    <div id="game-controls" class="game-controls">
+                                        <div class="movement-grid">
+                                            <button class="move-btn" data-dx="-1" data-dy="-1">↖</button>
+                                            <button class="move-btn" data-dx="0" data-dy="-1">↑</button>
+                                            <button class="move-btn" data-dx="1" data-dy="-1">↗</button>
+                                            <button class="move-btn" data-dx="-1" data-dy="0">←</button>
+                                            <button id="sensor-btn" class="sensor-btn">📡</button>
+                                            <button class="move-btn" data-dx="1" data-dy="0">→</button>
+                                            <button class="move-btn" data-dx="-1" data-dy="1">↙</button>
+                                            <button class="move-btn" data-dx="0" data-dy="1">↓</button>
+                                            <button class="move-btn" data-dx="1" data-dy="1">↘</button>
+                                        </div>
+                                        
+                                        <button id="check-location" class="game-button check-button" disabled>
+                                            Check Most Likely Location
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div id="game-over" class="game-over hidden">
+                                    <h4>Target Found!</h4>
+                                    <p>Final Score: <span id="final-score">0</span></p>
+                                    <button id="play-again" class="game-button primary-button">Play Again</button>
+                                </div>
+                                
+                                <div class="game-instructions">
+                                    <p><strong>How to play:</strong></p>
+                                    <ul>
+                                        <li>Move your agent (blue circle) around the grid</li>
+                                        <li>Take sensor readings to get noisy distance measurements</li>
+                                        <li>The particle cloud (red) shows your belief about target location</li>
+                                        <li>When certain enough, check the most likely location</li>
+                                    </ul>
+                                    <p><strong>Research connection:</strong> This game demonstrates key POMDP concepts like partial observability, belief state approximation, and particle filtering.</p>
                                 </div>
                             </div>
-                            
-                            <div id="game-over" class="game-over hidden">
-                                <h4>Target Found!</h4>
-                                <p>Final Score: <span id="final-score">0</span></p>
-                                <button id="play-again" class="game-button primary-button">Play Again</button>
-                            </div>
-                            
-                            <div class="game-instructions">
-                                <p><strong>How to play:</strong></p>
-                                <ul>
-                                    <li>Move your agent (blue circle) around the grid</li>
-                                    <li>Take sensor readings to get noisy distance measurements</li>
-                                    <li>The particle cloud (red) shows your belief about target location</li>
-                                    <li>When certain enough, check the most likely location</li>
-                                </ul>
-                                <p><strong>Research connection:</strong> This game demonstrates key POMDP concepts like partial observability, belief state approximation, and particle filtering.</p>
-                            </div>
                         </div>
+                    </div>
+                    
+                    <div id="game-teaser" class="game-teaser">
+                        <p>Interactive demonstration of particle filtering for belief approximation in POMDPs</p>
+                        <div class="game-icon-container">
+                            <i class="fas fa-robot"></i>
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-random"></i>
+                        </div>
+                        <button id="expand-game" class="game-button primary-button">Try the Demo</button>
                     </div>
                 </div>
                 

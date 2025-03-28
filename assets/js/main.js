@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     createContributionGraph();
     // Initialize POMDP Game
     initPOMDPGame();
-
+    // Initialize collapsible game card
+    initCollapsibleGameCard();
 });
 
 
@@ -599,5 +600,36 @@ function initPOMDPGame() {
             const dy = parseInt(this.getAttribute('data-dy'));
             movePlayer(dx, dy);
         });
+    });
+}
+
+
+function initCollapsibleGameCard() {
+    const toggleBtn = document.getElementById('toggle-game');
+    const expandBtn = document.getElementById('expand-game');
+    const gameContent = document.getElementById('game-content');
+    const gameTeaser = document.getElementById('game-teaser');
+    
+    // If elements don't exist, return
+    if (!toggleBtn || !expandBtn || !gameContent || !gameTeaser) return;
+    
+    // Toggle game visibility
+    toggleBtn.addEventListener('click', function() {
+        gameContent.classList.toggle('collapsed');
+        gameTeaser.classList.toggle('hidden');
+        
+        // Update icon
+        if (gameContent.classList.contains('collapsed')) {
+            toggleBtn.innerHTML = '<i class="fas fa-chevron-down"></i>';
+        } else {
+            toggleBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
+        }
+    });
+    
+    // Expand game from teaser
+    expandBtn.addEventListener('click', function() {
+        gameContent.classList.remove('collapsed');
+        gameTeaser.classList.add('hidden');
+        toggleBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
     });
 }
