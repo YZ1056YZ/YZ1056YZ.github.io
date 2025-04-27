@@ -27,4 +27,5 @@ yz1056yz.github.io/
 
 ## :telephone: Contact
 - **Email: yunuo.zhang@vanderbilt.edu**
+- **Google Scholar: https://scholar.google.com/citations?user=kkslga0AAAAJ&hl=zh-CN&authuser=1**
 - **LinkedIn: https://www.linkedin.com/in/yunuo-zhang-497450152/**
