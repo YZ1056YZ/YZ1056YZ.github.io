@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="description" content="Yunuo Zhang's CV - Computer Science Ph.D. candidate at Vanderbilt University specializing in POMDPs and decision making under uncertainty research.">
+        <meta name="keywords" content="Yunuo Zhang, CV, Resume, POMDPs, Decision Making, Computer Science">
+        <meta name="author" content="Yunuo Zhang">
+        
+        <title>Yunuo Zhang | CV</title>
+        
+        <link rel="icon" href="../assets/images/YZ_logo.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="../assets/css/fonts.css">
+        <style>
+            .cv-container {
+                background-color: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                margin: 30px 0;
+            }
+            
+            .cv-options {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .cv-button {
+                background-color: #1B67B2;
+                color: white;
+                padding: 12px 24px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+            }
+            
+            .cv-button:hover {
+                background-color: #0d4e8f;
+                transform: translateY(-2px);
+            }
+            
+            .cv-embed {
+                width: 100%;
+                height: 800px;
+                border: 1px solid #eaeaea;
+            }
+            
+            @media (max-width: 768px) {
+                .cv-embed {
+                    height: 500px;
+                }
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <!-- Header section -->
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <a href="../index.html">Yunuo Zhang</a>
+                </div>
+            </div>
+        </header>
+    
+        <!-- Main Content Section -->
+        <section id="cv" class="section">
+            <div class="container">
+                <h2 class="section-title">Curriculum Vitae</h2>
+                
+                <div class="cv-options">
+                    <a href="../assets/documents/CV.pdf" download class="cv-button">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                    <a href="../assets/documents/CV.pdf" target="_blank" class="cv-button">
+                        <i class="fas fa-external-link-alt"></i> Open in New Tab
+                    </a>
+                </div>
+                
+                <div class="cv-container">
+                    <object data="../assets/documents/CV.pdf" type="application/pdf" class="cv-embed">
+                        <p>It appears your browser doesn't support embedded PDFs. 
+                           You can <a href="../assets/documents/CV.pdf">download the CV</a> instead.</p>
+                    </object>
+                </div>
+                
+                <div class="cv-summary">
+                    <h3>Summary</h3>
+                    <p>Yunuo Zhang is a Computer Science Ph.D. candidate at Vanderbilt University, working under the guidance of Dr. Abhishek Dubey. Their research focuses on decision-making under uncertainty and Partially Observable Markov Decision Processes (POMDPs), with particular interest in using Particles-Based approaches to approximate high-dimensional and multi-modal posterior distributions.</p>
+                    
+                    <h3>Research Areas</h3>
+                    <ul>
+                        <li>Partially Observable Markov Decision Processes (POMDPs)</li>
+                        <li>Decision-making under Uncertainty</li>
+                        <li>Machine Learning</li>
+                        <li>Reinforcement Learning</li>
+                        <li>Applications in Robotics and Autonomous Cyber-Physical Systems</li>
+                    </ul>
+                    
+                    <h3>Key Projects</h3>
+                    <ul>
+                        <li>AIROAS (Annealed Importance Resampling for Observation Adaptation Search)</li>
+                        <li>Shrinking POMCP for UAV Search and Rescue</li>
+                        <li>Policy-Augmented Monte Carlo Tree Search (PA-MCTS)</li>
+                        <li>ADA-MCTS (Adaptive Monte Carlo Tree Search)</li>
+                        <li>Domain-Knowledge Guided Monte Carlo Tree Search (DG-MCTS)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Footer section -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Yunuo Zhang. All rights reserved.</p>
+            </div>
+        </footer>
+    
+        <!-- Scripts -->
+        <script src="../assets/js/main.js"></script>
+    </body>
+</html>
